@@ -1,1 +1,103 @@
 // Add any custom Sass & CSS here
+h1{
+	@include textstyle($black, center, Verdana, 200%, bold); 
+}
+.title{
+	margin-up: 20px;
+	margin-bottom:20px;
+	padding:40px;
+	padding-bottom:10px;
+}
+.rows{
+
+	.setorder{
+		background-color: #DCDCDC;
+		text-align:center;
+		.jump{
+			padding: 10px;
+		}
+		.order{
+			padding:10px;
+		}
+		.blank{
+			text-align:center;
+			padding-bottom:3px;
+			.input{
+				text-align:center;
+				width:50%;
+				margin-left: 325px;
+				padding: 3px;
+				border: none;
+				border-bottom: solid 2.5px #c9c9c9;
+				transition: border 0.2s;
+			}
+			.input:focus{
+				border: solid 3px $blue;
+			}
+			.img{
+					padding: 50px;
+					width:200px;
+					height:200px;
+					.pp{
+						@include textstyle($black, left, Verdana, 50%, normal); 
+						display:inline-block;
+						padding:0px;
+						margin:0px;
+					}
+			}
+			.img:hover{
+					opacity:0.7;
+				
+			}
+			
+		}
+	}
+}
+.detail{
+	text-align:center;
+	.imginfo{
+		text-align:center;
+		margin: 0 auto;
+		width:60%;
+		background-color: #DCDCDC;
+		.genrebtn{
+			padding:20px;
+			padding-bottom:0px;
+		}
+		.info{
+			text-align: left;
+			padding:20px;
+			padding-top:0px;
+			padding-bottom: 40px;
+			margin: 10px;
+			width: 300px;
+			height:350px;
+			display: inline;
+			.infotitle{
+				@include textstyle($orange, center, Verdana, 150%, bold); 
+			}
+			.inforank{
+				@include textstyle($orange, center, Verdana, 100%, bold); 
+			}
+			.plot{
+				@include textstyle($black, left, Verdana, 100%, normal); 
+			}
+			.infoother{
+				@include textstyle($white, left, Verdana, 100%, normal); 
+			}
+		}
+	}
+}
+.gallery{
+	text-align:center;
+	font-weight: bold;
+	.galleryimg{
+		padding:50px;
+		width: 200px;
+		height: 300px;
+	}
+	.galleryimg:hover{
+		opacity:0.8;
+		width: 220px;
+	}
+}

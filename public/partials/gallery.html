@@ -1,0 +1,37 @@
+
+<div ng-app="mp3" class = "rows gallery">
+	<div ng-controller="demoController">
+		<div class="jump">
+			<button class="hollow button"><a href="#/list">search</a></button>
+			<button class="hollow button"><a href="#/gallery">gallery</a></button>
+		</div>
+		<div class="gallerybtn">
+			<a class="secondary button  tiny button" ng-click="setgenre='Family'">Family</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Drama'">Drama</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Crime'">Crime</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Action'">Action</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Thriller'">Thriller</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Biography'">Biography</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='History'">History</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Western'">Western</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Adventure'">Adventure</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Fantasy'">Fantasy</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Romance'">Romance</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Sci-fi'">Sci-fi</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Mystery'">Mystery</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='War'">War</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Comedy'">Comedy</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Animation'">Animation</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Horror'">Horror</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Music'">Music</a>
+			<a class="secondary button  tiny button" ng-click="setgenre='Film-noir'">Film-noir</a>
+		</div>	
+		<div class="columns large-2 medium-4 small-12" ng-repeat="movie in alldata|filter: setgenre ">
+			<div class="galleryimg">
+				<a href="#/details/{{movie.rank}}">
+				<img ng-src="data/images/{{movie.imdbID}}.jpg">
+				</a>
+			</div>
+		</div>	
+	</div>     
+</div>

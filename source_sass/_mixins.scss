@@ -1,1 +1,8 @@
 // Insert your mixins
+@mixin textstyle($col, $textpos, $font, $fontsize, $fontweight){
+	color: $col;
+    text-align: $textpos;
+    font-family: $font;
+    font-size: $fontsize;
+    font-weight: $fontweight;
+}

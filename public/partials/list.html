@@ -1,0 +1,40 @@
+<div ng-app="mp3" class = "rows">
+	<div ng-controller="demoTwoController">
+		<div class = "setorder">
+			<div class="jump">
+				<button class="hollow button"><a href="#/list">search</a></button>
+				<button class="hollow button"><a href="#/gallery">gallery</a></button>
+			</div>
+			<div class = "order">
+				<!--
+				<a class="secondary button" ng-click="setorder('rank')">Rank</a>
+				<a class="secondary button" ng-click="setorder('title')">Title</a>
+				<a class="secondary button" ng-click="setorder('imdbRating')">Rating</a>
+			-->
+				<a class="secondary button" ng-click="order='rank'">Rank</a>
+				<a class="secondary button" ng-click="order='title'">Title</a>
+				<a class="secondary button" ng-click="order='-imdbRating'">Rating</a>
+			</div>
+			<div>
+				<a class="warning button tiny button" ng-click="change(0)">ascending</a>
+				<a class="warning button tiny button" ng-click="change(1)">descending</a>
+			</div>
+			<div class="blank">
+				<input class="input" type="text" ng-model="search">
+				<div class="columns large-2 medium-4 small-12" ng-repeat="movie in alldata | filter:search |orderBy: order">
+					<div class="img">
+						<a href="#/details/{{movie.rank}}">
+						<img ng-src="data/images/{{movie.imdbID}}.jpg">
+						</a>
+						<div  class ="pp">
+							{{ movie.title}}
+						</div>
+						<div  class ="pp">
+							Rank: {{ movie.rank }}
+						</div>
+					</div>
+				</div>	
+			</div>     
+		</div>
+	</div>
+</div>

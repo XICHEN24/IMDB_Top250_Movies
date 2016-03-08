@@ -1,0 +1,23 @@
+<div class = "detail">
+	<div class="jump">
+			<button class="hollow button"><a href="#/list">search</a></button>
+			<button class="hollow button"><a href="#/gallery">gallery</a></button>
+	</div>
+	<div class="imginfo">
+		<div class="genrebtn">
+			<a class="secondary button  tiny button" href="#/details/{{movie.rank-1}}">Prev</a>
+			<a class="secondary button  tiny button" href="#/details/{{movie.rank+1}}">Next</a>
+		</div>
+		<div class = "info"><img ng-src="data/images/{{movie.imdbID}}.jpg"></div>
+		<div class = "info">
+			<br>
+			<div class = "infotitle">{{ movie.title }}</div>
+			<div class = "inforank">Rank: {{movie.rank}}</div>
+			<div class = "plot"><strong>Plot:</strong> {{movie.plot}}</div>
+			<br>
+			<div class="infoother"><strong>Released: </strong>{{ movie.released}}</div>
+			<div class="infoother"><strong>Runtime: </strong>{{ movie.runtime}}</div>
+			<div class="infoother"><strong>Awards: </strong>{{ movie.awards }}</div>
+		</div>
+	</div>	
+</div>
